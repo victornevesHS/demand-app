@@ -18,5 +18,4 @@ public class CustomerPostDTO {
     private String contact;
     private String description;
     private String city;
-    private Boolean available;
 }
