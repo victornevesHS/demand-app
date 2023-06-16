@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/demand")
+@RequestMapping("/customer")
 public class CustomerPostController {
     @Autowired
     private CustomerPostService customerPostService;
@@ -18,6 +18,10 @@ public class CustomerPostController {
     @PostMapping
     public ResponseEntity<Object> createCustomer(@RequestBody CustomerPostDTO customerPostDTO){
         var customerPostModel = new CustomerPostModel();
+        customerPostModel.setName(customerPostDTO.getName());
+        customerPostModel.setDescription(customerPostDTO.getDescription());
+        customerPostModel.setCity(customerPostDTO.getCity());
+        customerPostModel.setContact(customerPostDTO.getContact());
         return ResponseEntity.status(HttpStatus.CREATED).body(customerPostService.save(customerPostModel));
     }
 

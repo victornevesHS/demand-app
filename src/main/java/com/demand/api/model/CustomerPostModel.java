@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 
 @Entity
@@ -17,15 +18,19 @@ public class CustomerPostModel {
     private Long id;
 
     @Column (name = "customer_name")
+    @NonNull
     private String name;
 
     @Column (name = "customer_description")
+    @NonNull
     private String description;
 
     @Column (name = "customer_city")
+    @NonNull
     private String city;
 
     @Column (name = "customer_contact")
+    @NonNull
     private String contact;
 
 
