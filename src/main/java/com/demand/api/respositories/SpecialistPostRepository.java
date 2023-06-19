@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SpecialistPostRepository extends JpaRepository<SpecialistPostModel, Long> {
-
 }

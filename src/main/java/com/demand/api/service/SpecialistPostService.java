@@ -18,13 +18,14 @@ public class SpecialistPostService {
     public SpecialistPostModel save(SpecialistPostModel specialistPostModel) {
         return specialistPostRepository.save(specialistPostModel);
     }
+
     public Optional<SpecialistPostModel> findById(Long id) {
         return specialistPostRepository.findById(id);
     }
+
     @Transactional
     public void delete(SpecialistPostModel specialistPostModel) {
         specialistPostRepository.delete(specialistPostModel);
     }
-
 
 }

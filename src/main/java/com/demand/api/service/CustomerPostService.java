@@ -16,9 +16,11 @@ public class CustomerPostService {
     public CustomerPostModel save(CustomerPostModel customerPostModel) {
         return customerPostRepository.save(customerPostModel);
     }
+
     public Optional<CustomerPostModel> findById(Long id) {
         return customerPostRepository.findById(id);
     }
+
     @Transactional
     public void delete(CustomerPostModel customerPostModel) {
         customerPostRepository.delete(customerPostModel);
